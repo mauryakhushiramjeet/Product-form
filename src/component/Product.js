@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { AiFillDelete } from "react-icons/ai";
 import { useDispatch, useSelector } from "react-redux";
-import { addProductList } from "./ProductSlice";
+import { addProductList } from "../utills/ProductSlice";
 
 const Product = () => {
   const [optionName, setOptionName] = useState("");
@@ -101,7 +101,7 @@ const Product = () => {
       <table>
         <thead>
           <tr>
-            <th className="p-4 border border-b">compination</th>
+            <th className="p-4 border border-b">combination</th>
             <th className="p-4 border border-b">Price</th>
             <th>Quantity</th>
           </tr>

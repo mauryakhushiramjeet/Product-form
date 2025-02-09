@@ -4,6 +4,9 @@ const ProductSlice = createSlice({
   name: "product",
   initialState: {
     productDetails: [],
+    colors: [],
+    sizes: [],
+    materials: [],
   },
   reducers: {
     addProductList: (state, action) => {
@@ -12,7 +15,10 @@ const ProductSlice = createSlice({
         inputs: [...action.payload.inputs],
       });
     },
+    addColor:(state,action)=>{
+      state.colors.push=action.payload
+    }
   },
 });
-export const { addProductList } = ProductSlice.actions;
+export const { addProductList, addColor } = ProductSlice.actions;
 export default ProductSlice.reducer;
